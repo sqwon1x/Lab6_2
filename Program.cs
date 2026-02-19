@@ -35,3 +35,17 @@ abstract class Furniture
 
     public abstract void Assemble();
 }
+
+// Клас Chair
+class Chair : Furniture
+{
+    public Chair(string material) : base(material) { }
+
+    public override void Assemble()
+    {
+        Console.WriteLine($"Chair made of {material}:");
+        Console.WriteLine("1. Attach legs.");
+        Console.WriteLine("2. Fix the seat.");
+        Console.WriteLine("3. Secure the backrest.");
+    }
+}
