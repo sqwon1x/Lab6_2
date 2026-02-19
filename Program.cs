@@ -22,3 +22,16 @@ class Program
         }
     }
 }
+
+// Базовий клас
+abstract class Furniture
+{
+    protected string material;
+
+    public Furniture(string material)
+    {
+        this.material = material;
+    }
+
+    public abstract void Assemble();
+}
