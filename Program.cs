@@ -12,7 +12,7 @@ class Program
         {
             new Chair("Wood"),
             new Table("Metal"),
-            //new Wardrobe("Oak")
+            new Wardrobe("Oak")
         };
 
         foreach (Furniture item in furnitureList)
@@ -60,5 +60,19 @@ class Table : Furniture
         Console.WriteLine($"Table made of {material}:");
         Console.WriteLine("1. Attach legs to tabletop.");
         Console.WriteLine("2. Tighten screws.");
+    }
+}
+
+// Клас Wardrobe
+class Wardrobe : Furniture
+{
+    public Wardrobe(string material) : base(material) { }
+
+    public override void Assemble()
+    {
+        Console.WriteLine($"Wardrobe made of {material}:");
+        Console.WriteLine("1. Assemble frame.");
+        Console.WriteLine("2. Install shelves.");
+        Console.WriteLine("3. Attach doors.");
     }
 }
